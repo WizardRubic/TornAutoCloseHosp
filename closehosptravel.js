@@ -13,10 +13,10 @@
     'use strict';
     var isAttackable = function(description) {
         // if hospital or travelling then return false as they're not attackable
-        if(description.indexOf("hospital")!=-1 || description.indexOf("Travel")!=-1 || description.indexOf("jail")!=-1){
-            return false;
-        } else {
+        if(description=="" || description.indexOf("Okay")!=-1) {
             return true;
+        } else {
+            return false;
         }
     };
     var profileElement = (document.getElementsByClassName("content-wrapper m-left20 left summer")[0]);
