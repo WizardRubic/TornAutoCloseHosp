@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AutoCloseHosp'd
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.4
 // @description  automatically closes torn profile pages if target is in the hospital
 // @author       WizardRubic
 // @match        *.torn.com/profiles.php*
