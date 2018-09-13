@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         AutoCloseHosp'd
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.2
 // @description  automatically closes torn profile pages if target is in the hospital
 // @author       WizardRubic
-// @match        *.torn.com/loader.php*
+// @match        *.torn.com/profiles.php*
 // @grant        window.close
 
 // ==/UserScript==
@@ -13,18 +13,15 @@
     'use strict';
     var isAttackable = function(description) {
         // if hospital or travelling then return false as they're not attackable
-        if(description=="" || description.indexOf("Start fight")!=-1) {
+        if(description=="" || description.indexOf("Okay")!=-1) {
             return true;
         } else {
             return false;
         }
     };
-    var profileElement = document.body;
+    var profileElement = (document.getElementsByClassName("content-wrapper m-left20 left summer")[0]);
     var callback = function(mutationsList) {
-        if(document.getElementsByClassName("dialog___1j2Dg").length == 0) {
-           return;
-        }
-        var description = document.getElementsByClassName("dialog___1j2Dg")[0].innerHTML;
+        var description = document.getElementsByClassName("main-desc")[0].innerHTML;
         if(!isAttackable(description)) {
             window.close();
         }
