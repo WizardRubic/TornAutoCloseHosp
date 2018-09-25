@@ -3,4 +3,5 @@ Made for use on torn.com, Automatically closes torn profile pages when the targe
 
 https://greasyfork.org/en/scripts/372163-autoclosehosp-d
 
-![gif of script](https://imgur.com/CQdEkIR.gifv "Demonstration")
+## webm video
+https://i.imgur.com/CQdEkIR.gifv
